@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pour toi ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    img {
+      max-width: 90%;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    button {
+      font-size: 1.3rem;
+      padding: 12px 30px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #ff2f6d;
+      color: white;
+    }
+
+    #no {
+      background: #444;
+      color: white;
+      position: relative;
+    }
+
+    .heart {
+      font-size: 3rem;
+      margin-top: 25px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ÉCRAN 1 -->
+  <section>
+    <h1>🤟🏼Coucou Hinafounette !! 🤟🏼</h1>
+    <p>fais juste défiler ↓</p>
+  </section>
+
+  <!-- ÉCRAN 2 -->
+  <section>
+    <h1>On est le 14 févrieeeeerr eheheh</h1>
+    <p>pour l'occasion j'ai un sondage 😏😏</p>
+  </section>
+
+  <!-- ÉCRAN 3 -->
+  <section>
+    <h1>Juste pour être sûre quoi 👀👀</h1>
+    <p>(et aussi pour te faire sourire)</p>
+  </section>
+
+  <!-- ÉCRAN 4 -->
+  <section>
+    <h1>Alors voilà mon chat</h1>
+    <p>j’avais une question importante</p>
+  </section>
+
+  <!-- ÉCRAN FINAL -->
+  <section>
+    <h1>Tu veux être ma Saint-Valentin ?</h1>
+<p>(et ça suce ce soir ?🫶🏼🫶🏼)</p>
+
+    <div class="buttons">
+      <button id="yes">Oui ❤️</button>
+      <button id="no">Non 💔</button>
+    </div>
+
+    <div class="heart">❤️</div>
+  </section>
+
+  <script>
+    const noBtn = document.getElementById('no');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * 300 - 150;
+      const y = Math.random() * 300 - 150;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    document.getElementById('yes').addEventListener('click', () => {
+      document.body.innerHTML = `
+        <section style="height:150vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:black;color:white;text-align:center;">
+          <h1>Je t'aime mon cornichon</h1>
+          <p style="font-size:1.4rem;margin-top:20px;">YESSS A MOI LA PIIIIIIIPE 😏😏</p>
+          <div style="font-size:4rem;margin-top:30px;">💘💘💘</div>
+<img src="giphy.gif" alt="GIF">
+<p>Bon, sinon en vrai… merci d’être dans ma vie Hina.
+J’aurais jamais pu rencontrer mieux que toi.
+Ça fait bientôt 7 mois qu’on se côtoie et je me suis jamais senti aussi comblé dans une relation.
+J’ai juste hâte de voir la suite : nos prochaines aventures, nos projets, nos galères, nos moments de joie et tout le reste.
+J’ai envie de découvrir ce que la vie avec toi va m’offrir 🫶🏼🫶🏼
+
+Je t’aime déjà Hina… mais n’en profite pas ! Hein ?!</p>
+        </section>
+      `;
+    });
+  </script>
+
+</body>
+</html>
